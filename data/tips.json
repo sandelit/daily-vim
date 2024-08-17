@@ -1,0 +1,6 @@
+[
+  { "content": "Use 'dd' to delete a line" },
+  { "content": "Press 'i' to enter insert mode" },
+  { "content": "Use '/pattern' to search for a pattern" },
+  { "content": "tsartsrtrT '/pattern' to search for a pattern" }
+]
