@@ -3,20 +3,53 @@ package handlers
 import (
 	"html/template"
 	"net/http"
-
-	"github.com/sandelit/daily-vim/internal/models"
 )
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
-	tip := models.GetRandomTip()
+	data := struct {
+		Title   string
+		Content string
+		tip     string
+	}{
+		Title:   "Daily Vim",
+		Content: "Welcome to Daily Vim!",
+	}
 
-	tmpl, err := template.ParseFiles("web/templates/index.html", "web/templates/header.html", "web/templates/github.html")
+	renderTemplate(w, "web/templates/index.html", data)
+}
+
+func AllTipsHandler(w http.ResponseWriter, r *http.Request) {
+	data := struct {
+		Title   string
+		Content string
+	}{
+		Title:   "Daily Vim - All Tips",
+		Content: "Welcome to Daily Vim!",
+	}
+
+	renderTemplate(w, "web/templates/all-tips.html", data)
+}
+
+func AboutHandler(w http.ResponseWriter, r *http.Request) {
+	data := struct {
+		Title   string
+		Content string
+	}{
+		Title:   "Daily Vim - About",
+		Content: "Welcome to Daily Vim!",
+	}
+
+	renderTemplate(w, "web/templates/about.html", data)
+}
+
+func renderTemplate(w http.ResponseWriter, page string, data interface{}) {
+	tmpl, err := template.ParseFiles(page, "web/templates/header.html", "web/templates/github.html")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
-	err = tmpl.Execute(w, tip)
+	err = tmpl.Execute(w, data)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
