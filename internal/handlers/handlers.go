@@ -3,16 +3,19 @@ package handlers
 import (
 	"html/template"
 	"net/http"
+
+	"github.com/sandelit/daily-vim/internal/models"
 )
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	data := struct {
 		Title   string
 		Content string
-		tip     string
+		Tip     models.Tip
 	}{
 		Title:   "Daily Vim",
 		Content: "Welcome to Daily Vim!",
+		Tip:     models.GetRandomTip(),
 	}
 
 	renderTemplate(w, "web/templates/index.html", data)

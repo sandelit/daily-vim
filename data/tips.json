@@ -1,6 +1,5 @@
 [
-  { "content": "Use 'dd' to delete a line" },
-  { "content": "Press 'i' to enter insert mode" },
-  { "content": "Use '/pattern' to search for a pattern" },
-  { "content": "tsartsrtrT '/pattern' to search for a pattern" }
+  { "title": "te", "content": "dd' to delete a line" },
+  { "title": "title", "content": "Use 'dd' to a line" },
+  { "title": "rtwse", "content": "rstsdd' line" }
 ]

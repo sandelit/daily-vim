@@ -64,3 +64,16 @@ main {
   align-items: center;
   font-family: "Montserrat", sans-serif;
 }
+
+.tip-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: hsla(204, 10%, 12%, 1);
+  min-width: 35rem;
+  min-height: 25rem;
+  padding: 10px;
+  border: solid 2px #fbfccc;
+  border-radius: 10%;
+}

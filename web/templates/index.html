@@ -8,7 +8,12 @@
   </head>
   <body>
     {{template "header" .}}
-    <main>"index"</main>
+    <main>
+      <div class="tip-container">
+        <h1>{{.Tip.Title}}</h1>
+        <div>{{.Tip.Content}}</div>
+      </div>
+    </main>
     <script src="/static/js/script.js"></script>
   </body>
 </html>
