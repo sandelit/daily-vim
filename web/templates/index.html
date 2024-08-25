@@ -10,8 +10,13 @@
     {{template "header" .}}
     <main>
       <div class="tip-container">
-        <h1>{{.Tip.Title}}</h1>
-        <div>{{.Tip.Content}}</div>
+        <h1 class="tip-title">{{.Tip.Title}}</h1>
+        <div class="tip-content">{{.Tip.Content}}</div>
+        <div class="tip-link">
+          <a href="{{.Tip.Link}}" target="_blank" rel="noreferrer"
+            >Documentation</a
+          >
+        </div>
       </div>
     </main>
     <script src="/static/js/script.js"></script>

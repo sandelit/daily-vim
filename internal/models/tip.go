@@ -9,8 +9,9 @@ import (
 )
 
 type Tip struct {
-	Title string `json:"title"`
+	Title   string `json:"title"`
 	Content string `json:"content"`
+	Link    string `json:"link"`
 }
 
 var tips []Tip

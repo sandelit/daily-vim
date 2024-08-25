@@ -68,12 +68,30 @@ main {
 .tip-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   background: hsla(204, 10%, 12%, 1);
-  min-width: 35rem;
-  min-height: 25rem;
-  padding: 10px;
+  width: 35rem;
+  height: 25rem;
+  padding: 30px;
   border: solid 2px #fbfccc;
   border-radius: 10%;
+}
+
+.tip-container a {
+  color: #fbfccc;
+}
+
+.tip-title {
+  text-align: center;
+}
+
+.tip-content {
+  font-size: 1.2rem;
+}
+
+.tip-link {
+  align-self: flex-start;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: 20px;
 }
