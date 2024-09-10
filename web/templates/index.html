@@ -8,17 +8,7 @@
   </head>
   <body>
     {{template "header" .}}
-    <main>
-      <div class="tip-container">
-        <h1 class="tip-title">{{.Tip.Title}}</h1>
-        <div class="tip-content">{{.Tip.Content | processContent }}</div>
-        <div class="tip-link">
-          <a href="{{.Tip.Link}}" target="_blank" rel="noreferrer"
-            >Vimhelp Link</a
-          >
-        </div>
-      </div>
-    </main>
+    <main>{{template "tip" .Tip}}</main>
     <script src="/static/js/script.js"></script>
   </body>
 </html>

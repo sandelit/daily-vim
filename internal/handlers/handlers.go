@@ -11,13 +11,11 @@ import (
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	data := struct {
-		Title   string
-		Content string
-		Tip     models.Tip
+		Title string
+		Tip   models.Tip
 	}{
-		Title:   "Daily Vim",
-		Content: "Welcome to Daily Vim!",
-		Tip:     models.GetRandomTip(),
+		Title: "Daily Vim",
+		Tip:   models.GetRandomTip(),
 	}
 
 	renderTemplate(w, "web/templates/index.html", data)
@@ -25,11 +23,11 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 
 func AllTipsHandler(w http.ResponseWriter, r *http.Request) {
 	data := struct {
-		Title   string
-		Content string
+		Title string
+		Tips  []models.Tip
 	}{
-		Title:   "Daily Vim - All Tips",
-		Content: "Welcome to Daily Vim!",
+		Title: "Daily Vim - All Tips",
+		Tips:  models.GetAllTips(),
 	}
 
 	renderTemplate(w, "web/templates/all-tips.html", data)
@@ -37,11 +35,9 @@ func AllTipsHandler(w http.ResponseWriter, r *http.Request) {
 
 func AboutHandler(w http.ResponseWriter, r *http.Request) {
 	data := struct {
-		Title   string
-		Content string
+		Title string
 	}{
-		Title:   "Daily Vim - About",
-		Content: "Welcome to Daily Vim!",
+		Title: "Daily Vim - About",
 	}
 
 	renderTemplate(w, "web/templates/about.html", data)
@@ -63,7 +59,7 @@ func renderTemplate(w http.ResponseWriter, page string, data interface{}) {
 	}
 
 	// Parse and associate additional template files
-	tmpl, err = tmpl.ParseFiles("web/templates/header.html", "web/templates/github.html")
+	tmpl, err = tmpl.ParseFiles("web/templates/header.html", "web/templates/github.html", "web/templates/tip.html")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return

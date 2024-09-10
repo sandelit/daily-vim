@@ -42,3 +42,7 @@ func GetRandomTip() Tip {
 	rand.Seed(time.Now().UnixNano())
 	return tips[rand.Intn(len(tips))]
 }
+
+func GetAllTips() []Tip {
+	return tips
+}
