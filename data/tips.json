@@ -1,17 +1,22 @@
 [
   {
-    "title": "ttsrtrse",
-    "content": "ddd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a linedd' to derrre a lined' to derrre a line",
-    "link": "https://www.google.com"
+    "title": "Jump to last edit",
+    "content": "You can jump to the last edit with the command ---g;---",
+    "link": "https://vimhelp.org/motion.txt.html#g%3B"
   },
   {
-    "title": "srat",
-    "content": "ddd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd edd aa tdvrsv wtd ed aa tdvrsv wtd e",
-    "link": "https://www.google.com"
+    "title": "Select everything in buffer",
+    "content": "To select everything in the buffer you can use the command ---ggVG---",
+    "link": "https://vimhelp.org"
   },
   {
-    "title": "tineiohe",
-    "content": "hhonmuna  arst dxclinehonmuna  arst dxclinehonmuna  arst dxclinehonmuna  arst dxclinehonmuna  arst dxclinehonmuna  arst dxclinehonmuna  arst dxclinehonmuna  arst dxclinehonmuna  arst dxclinehonmuna  arst dxclinehonmuna  arst dxclinehonmuna  arst dxclinehonmunadxclinehonmuna  arst dxclinehonmuna  arst dxclidxclineonmuna  arst dxcline",
-    "link": "https://www.google.com"
+    "title": "Move to first non-blank character of line",
+    "content": "---^--- Moves you to the first non-blank character of the line you are on",
+    "link": "https://vimhelp.org"
+  },
+  {
+    "title": "Toggle case of selected character",
+    "content": "---~--- Toggles the case of current character. This can be used to upper/lowercase an entire word with ---viw~---",
+    "link": "https://vimhelp.org"
   }
 ]
