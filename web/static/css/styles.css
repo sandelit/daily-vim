@@ -70,19 +70,14 @@ main {
   flex-direction: column;
   justify-content: space-between;
   background: hsla(204, 10%, 12%, 1);
-  width: 35rem;
-  height: 25rem;
-  padding: 30px;
+  max-width: 35rem;
+  padding: 20px 40px;
   border: solid 2px #fbfccc;
-  border-radius: 10%;
+  border-radius: 16px;
 }
 
 .tip-container a {
   color: #fbfccc;
-}
-
-.tip-title {
-  text-align: center;
 }
 
 .tip-content {
@@ -93,5 +88,13 @@ main {
   align-self: flex-start;
   text-align: left;
   margin-top: auto;
+  margin-top: 10%;
   margin-bottom: 20px;
+}
+
+.vim-command {
+  font-family: monospace;
+  background-color: #333;
+  padding: 2px 4px;
+  border-radius: 3px;
 }

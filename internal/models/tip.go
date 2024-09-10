@@ -11,7 +11,7 @@ import (
 type Tip struct {
 	Title   string `json:"title"`
 	Content string `json:"content"`
-	Link    string `json:"link"`
+	Link    string `json:"link,omitempty"`
 }
 
 var tips []Tip

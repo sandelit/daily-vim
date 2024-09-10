@@ -11,10 +11,10 @@
     <main>
       <div class="tip-container">
         <h1 class="tip-title">{{.Tip.Title}}</h1>
-        <div class="tip-content">{{.Tip.Content}}</div>
+        <div class="tip-content">{{.Tip.Content | processContent }}</div>
         <div class="tip-link">
           <a href="{{.Tip.Link}}" target="_blank" rel="noreferrer"
-            >Documentation</a
+            >Vimhelp Link</a
           >
         </div>
       </div>
