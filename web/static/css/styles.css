@@ -101,3 +101,15 @@ main {
   padding: 2px 4px;
   border-radius: 3px;
 }
+
+.two-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: hsla(204, 10%, 12%, 1);
+  max-width: 35rem;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border: solid 2px #fbfccc;
+  border-radius: 16px;
+}

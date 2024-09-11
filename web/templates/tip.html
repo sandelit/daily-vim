@@ -1,9 +1,10 @@
 {{define "tip"}}
-<div class="tip-container">
-  <h1 class="tip-title">{{.Title}}</h1>
-  <div class="tip-content">{{.Content | processContent }}</div>
-  <div class="tip-link">
-    <a href="{{.Link}}" target="_blank" rel="noreferrer">Vimhelp Link</a>
+<div class="two-columns">
+  <div>
+    <h3><a href="/{{.Title}}">{{.Title}}</a></h3>
+  </div>
+  <div class="tip-command">
+    <h1 class="vim-command">{{.Command}}</h1>
   </div>
 </div>
 {{end}}

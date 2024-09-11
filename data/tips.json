@@ -2,21 +2,25 @@
   {
     "title": "Jump to last edit",
     "content": "You can jump to the last edit with the command ---g;---",
+    "command": "g;",
     "link": "https://vimhelp.org/motion.txt.html#g%3B"
   },
   {
     "title": "Select everything in buffer",
     "content": "To select everything in the buffer you can use the command ---ggVG---",
+    "command": "ggVG",
     "link": "https://vimhelp.org"
   },
   {
     "title": "Move to first non-blank character of line",
     "content": "---^--- Moves you to the first non-blank character of the line you are on",
+    "command": "^",
     "link": "https://vimhelp.org"
   },
   {
     "title": "Toggle case of selected character",
     "content": "---~--- Toggles the case of current character. This can be used to upper/lowercase an entire word with ---viw~---",
+    "command": "~",
     "link": "https://vimhelp.org"
   }
 ]

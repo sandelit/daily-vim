@@ -11,6 +11,7 @@ import (
 type Tip struct {
 	Title   string `json:"title"`
 	Content string `json:"content"`
+	Command string `json:"command",omitempty`
 	Link    string `json:"link,omitempty"`
 }
 
