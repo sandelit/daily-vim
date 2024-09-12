@@ -83,14 +83,12 @@ func renderTemplate(w http.ResponseWriter, page string, data interface{}) {
 		return
 	}
 
-	// Parse and associate additional template files
 	tmpl, err = tmpl.ParseFiles("web/templates/header.html", "web/templates/github.html", "web/templates/tip.html")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
-	// Execute the main template
 	err = tmpl.ExecuteTemplate(w, templateName, data)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)

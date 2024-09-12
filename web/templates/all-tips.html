@@ -9,11 +9,14 @@
   <body>
     {{template "header" .}}
     <main class="main-all-tips">
-      <ul>
-        {{range .Tips}}
-        <li>{{template "tip" .}}</li>
-        {{end}}
-      </ul>
+      <div>
+        <h1 class="about-title">All Tips</h1>
+        <ul>
+          {{range .Tips}}
+          <li>{{template "tip" .}}</li>
+          {{end}}
+        </ul>
+      </div>
     </main>
     <script src="/static/js/script.js"></script>
   </body>

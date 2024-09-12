@@ -10,10 +10,12 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-size: 1.2rem;
 }
 
 ul {
   list-style: none;
+  padding-left: 0;
 }
 
 header {
@@ -74,6 +76,26 @@ nav ul li a:hover {
   justify-content: center;
   margin-top: 5vh;
   font-family: "Montserrat", sans-serif;
+}
+
+.main-about {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  font-family: "Montserrat", sans-serif;
+  width: 50%;
+  max-width: 600px;
+  margin: 5vh auto;
+  line-height: 1.5rem;
+}
+
+.main-about h1 {
+  line-height: 2rem;
+}
+
+.main-all-tips h1 {
+  line-height: 2rem;
 }
 
 .tip-container {
