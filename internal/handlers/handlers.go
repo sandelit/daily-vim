@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"path/filepath"
 	"regexp"
+	"strconv"
 
 	"github.com/sandelit/daily-vim/internal/models"
 )
@@ -15,7 +16,7 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 		Tip   models.Tip
 	}{
 		Title: "Daily Vim",
-		Tip:   models.GetRandomTip(),
+		Tip:   models.GetTipOfTheDay(),
 	}
 
 	renderTemplate(w, "web/templates/index.html", data)
@@ -41,6 +42,30 @@ func AboutHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	renderTemplate(w, "web/templates/about.html", data)
+}
+
+func TipHandler(w http.ResponseWriter, r *http.Request) {
+	id, err := strconv.Atoi(r.PathValue("id"))
+	if err != nil {
+		http.NotFound(w, r)
+		return
+	}
+
+	tip, err := models.GetTipByID(id)
+	if err != nil {
+		http.NotFound(w, r)
+		return
+	}
+
+	data := struct {
+		Title string
+		Tip   models.Tip
+	}{
+		Title: "Daily Vim - " + tip.Title,
+		Tip:   tip,
+	}
+
+	renderTemplate(w, "web/templates/index.html", data)
 }
 
 func renderTemplate(w http.ResponseWriter, page string, data interface{}) {

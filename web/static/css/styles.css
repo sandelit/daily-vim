@@ -60,11 +60,19 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-main {
+.main {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main-all-tips {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -95,6 +103,15 @@ main {
   margin-bottom: 20px;
 }
 
+.tip-page-link {
+  color: #fbfccc;
+  align-self: flex-start;
+  text-align: left;
+  margin-top: auto;
+  margin-top: 10%;
+  margin-bottom: 20px;
+}
+
 .vim-command {
   font-family: monospace;
   background-color: #333;
@@ -112,4 +129,5 @@ main {
   margin: 20px 0;
   border: solid 2px #fbfccc;
   border-radius: 16px;
+  gap: 5vw;
 }
